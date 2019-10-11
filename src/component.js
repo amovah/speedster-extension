@@ -11,8 +11,18 @@ import {
   get as getDB,
 } from './db';
 
+function changeExtensionStatus(changeStatus) {
+  return async (newStatus) => {
+    await saveDB({
+      ...getDB(),
+      status: newStatus,
+    });
+
+    changeStatus(newStatus);
+  };
+}
+
 export default () => {
-  console.log(getDB());
   const [status, changeStatus] = useState(getDB().status);
 
   return (
@@ -26,6 +36,7 @@ export default () => {
         <Col span={4}>
           <Switch
             defaultChecked={status}
+            onChange={changeExtensionStatus(changeStatus)}
           />
         </Col>
       </Row>
