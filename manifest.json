@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Speedster",
+    "version": "1.0",
+    "description": "Speedster extension for integrating with Speedster desktop application",
+    "homepage_url": "https://github.com/amovah/speedster-extension",
+    "icons": {
+        "32": "beasts-32.png"
+    },
+    "browser_action": {
+        "default_icon": "beasts-32.png",
+        "default_title": "Speedster",
+        "default_popup": "popup/index.html"
+    }
+}
