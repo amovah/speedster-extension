@@ -11,7 +11,7 @@ module.exports = {
   entry: resolve(__dirname, '..', 'src/app.js'),
   output: {
     filename: 'bundle.js',
-    path: resolve(__dirname, '..', 'popup'),
+    path: resolve(__dirname, '..', '..', 'popup'),
   },
   module: {
     rules: [
@@ -65,20 +65,7 @@ module.exports = {
           },
         ]
       },
-      {
-        test: /\.(less|js)$/,
-        use: [
-          {
-            loader: 'string-replace-loader',
-            options: {
-              search: '@@CDN@@',
-              replace: process.env.CDN_PATH,
-              flags: 'g'
-            }
-          }
-        ]
-      }
-    ]
+    ],
   },
   resolve: {
     alias: {
