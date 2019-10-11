@@ -1,16 +1,19 @@
 /* eslint-disable */
 
 const webpack = require('webpack');
-const { resolve } = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./common.js');
 
 module.exports = Object.assign({}, common, {
-  mode: 'development',
-  watch: true,
+  mode: 'production',
+  optimization: {
+    minimizer: [
+      new TerserPlugin(),
+    ]
+  },
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development',
+      NODE_ENV: 'production',
     }),
-  ],
-  devtool: 'source-map',
-})
+  ]
+});
