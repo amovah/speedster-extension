@@ -14,5 +14,10 @@
   },
   "permissions": [
     "storage"
-  ]
+  ],
+  "applications": {
+    "gecko": {
+      "id": "speedster-download-manager@example.org"
+    }
+  }
 }
