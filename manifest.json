@@ -5,10 +5,10 @@
     "description": "Speedster extension for integrating with Speedster desktop application",
     "homepage_url": "https://github.com/amovah/speedster-extension",
     "icons": {
-        "32": "beasts-32.png"
+        "256": "256x256.png"
     },
     "browser_action": {
-        "default_icon": "beasts-32.png",
+        "default_icon": "256x256.png",
         "default_title": "Speedster",
         "default_popup": "popup/index.html"
     }
