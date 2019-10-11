@@ -13,11 +13,15 @@
     "default_popup": "popup/index.html"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "downloads"
   ],
   "applications": {
     "gecko": {
       "id": "speedster-download-manager@example.org"
     }
+  },
+  "background": {
+    "scripts": ["background.js"]
   }
 }
