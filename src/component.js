@@ -12,7 +12,7 @@ export default () => (
     <Row>
       <Col span={20}>
         <p>
-          Extension Power:
+          Turn Off/On Extension:
         </p>
       </Col>
       <Col span={4}>
